@@ -1,12 +1,16 @@
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevent default form submission
+    event.preventDefault();
     
     const formElement = document.getElementById('contact-form');
     const messageElement = document.getElementById('message');
+    const formAction = formElement.getAttribute('action');
     
     // Send to FormSubmit
-    fetch("https://formsubmit.co/supermax333@proton.me", {
+    fetch(formAction, {
         method: "POST",
+        headers: {
+            'Accept': 'application/json'
+        },
         body: new FormData(formElement)
     })
     .then(response => {
