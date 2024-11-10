@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Repair Service - Make a Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="window.location.href='index.html'">← Back to Home</button>
+        <h1>Make a Payment</h1>
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry Date (MM/YY)</label>
+                <input type="text" id="expiry" required>
+            </div>
+            <div class="form-group">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" required>
+            </div>
+            <button type="submit">Pay Now</button>
+        </form>
+        <div id="message"></div>
+        <p class="processing-fee">All card charges will be subject to a 2% processing fee.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
