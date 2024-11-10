@@ -7,8 +7,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         method: "POST",
         body: new FormData(formElement)
     })
-    .then(response => response.json())
-    .then(data => {
+    .then(response => {
+        // Remove the response.json() since we're not getting JSON back
         document.getElementById('message').innerText = "Thank you! Your contact information has been submitted.";
         formElement.reset();
     })
